@@ -9,6 +9,12 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: var(--clr-red);
 }
 
 :root {
@@ -25,12 +31,116 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    background-image: url(./images/bg-intro-desktop.png);
-    background-color: var(--clr-red);
+    align-items: center;
+    max-width: 1440px;
 }
 
-.sign-up-form {
+.intro {
+    width:100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+    color: #fff;
+}
+
+.intro__heading {
+    margin-bottom: 20px;
+    width:90%;
+}
+
+.intro__description {
+    margin-bottom: 40px;
+    width:90%;
+}
+
+.sign-up {
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up__banner {
+    width:90%;
+    background-color: var(--clr-blue);
+    color: #fff;
+    margin: 20px 0;
+    padding: 1.2rem 3.6rem;
+    text-align: center;
+    border-radius:10px;
+    font-weight: 500;
+    box-shadow: 0 7px 1px hsla(0, 38%, 52%, 0.432);
+}
+
+.sign-up__banner span {
+    font-weight: 400;
+}
+
+.sign-up__form {
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding:1.6rem;
+    border-radius:10px;
+    box-shadow: 0 7px 1px hsla(0, 38%, 52%, 0.432);
+}
+
+.sign-up__form input {
+    padding: 1.2rem .8rem;
+    margin-bottom: 1rem;
+    border-radius:10px;
+    border: 1px solid var(--clr-grey-blue);
+    font-weight: 600;
+}
+
+.sign-up__form button {
+    padding: 1.2rem .8rem;
+    border-radius:10px;
+    margin-bottom: 1rem;
+    background-color: var(--clr-green);
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 1px hsla(153, 58%, 24%, 0.418);
+}
+
+.sign-up__terms {
+    text-align: center;
+    font-size: 0.79rem;
+    color: var(--clr-grey-blue)
+}
+
+.sign-up__terms a {
+    color: var(--clr-red);
+}
+
+@media (min-width: 869px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .intro {
+        text-align: left;
+    }
+
+    .intro__heading {
+        width:70%;
+        font-size: 3rem;
+    }
+    
+    .intro__description {
+        width:70%;
+    }
+
+    .sign-up__form {
+        max-width:500px;
+    }
+
+    .sign-up__banner {
+        max-width:500px;
+    }
 }

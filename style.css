@@ -96,6 +96,11 @@ body {
     font-weight: 600;
 }
 
+.sign-up__form input:focus {
+    color: var(--clr-dark-blue);
+    outline: 1px solid var(--clr-blue);
+}
+
 .sign-up__form button {
     padding: 1.2rem .8rem;
     border-radius:10px;
@@ -106,6 +111,11 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 5px 1px hsla(153, 58%, 24%, 0.418);
+}
+
+.sign-up__form button:hover {
+    background-color: hsl(154, 65%, 65%);
+    cursor: pointer;
 }
 
 .sign-up__terms {

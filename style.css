@@ -26,6 +26,10 @@ body {
     /* Neutral */
     --clr-dark-blue: hsl(249, 10%, 26%);
     --clr-grey-blue: hsl(246, 25%, 77%);
+    /* Error, Success */
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
 }
 
 .container {
@@ -90,7 +94,6 @@ body {
 
 .sign-up__form input {
     padding: 1.2rem .8rem;
-    margin-bottom: 1rem;
     border-radius:10px;
     border: 1px solid var(--clr-grey-blue);
     font-weight: 600;
@@ -116,6 +119,25 @@ body {
 .sign-up__form button:hover {
     background-color: hsl(154, 65%, 65%);
     cursor: pointer;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field.error input {
+    border-color: var(--error-color);
+}
+
+.form-field.success input {
+    border-color: var(--success-color);
+}
+
+.form-field small {
+    color: var(--error-color);
+    margin-bottom:16px;
+    text-align: right;
 }
 
 .sign-up__terms {
